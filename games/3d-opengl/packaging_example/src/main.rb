@@ -62,7 +62,7 @@ class Main
   end
 
   def poll_input
-    if Keyboard.next
+    if Keyboard.next # pull next keypress off the buffer
       key = Keyboard.event_key
       key_state = Keyboard.event_key_state # true on key down, false on key up
       @moving[:east] = key_state if key == Keyboard::KEY_RIGHT
